@@ -29,6 +29,7 @@ function App() {
       <Nav 
         activeTab={activeTab}
         onTabChange={setActiveTab}
+        items={summarizeCart(cart)}
       />
       <main className='App-content'>
         <Content 
@@ -45,9 +46,14 @@ const Content = ({ tab, onAddToCart, onRemoveItem, cart }) => {
   switch (tab) {
     default:
     case 'items':
-      return <ItemPage items={items} onAddToCart={onAddToCart} />;
+      return <ItemPage 
+              items={items}
+              onAddToCart={onAddToCart} />;
     case 'cart':
-      return <CartPage items={cart} onAddOne={onAddToCart} onRemoveOne={onRemoveItem} />;
+      return <CartPage 
+              items={cart} 
+              onAddOne={onAddToCart}
+              onRemoveOne={onRemoveItem} />;
   }
 };
 

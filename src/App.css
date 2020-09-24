@@ -15,10 +15,16 @@
 }
 
 .App-nav button {
-  font-size: 18px;
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+.App-nav-button {
+  font-size: 18px;
+  /* background: transparent;
+  border: none;
+  cursor: pointer; */
 }
 
 .App-nav-item {
@@ -39,4 +45,10 @@
 
 .App-nav-item.selected {
   border-bottom-color: #ffaa3f;
+}
+
+.App-nav-cart {
+  list-style: none;
+  text-align: right;
+  margin-top: -15px;
 }
